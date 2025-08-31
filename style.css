@@ -1,0 +1,144 @@
+:root { --header-h: 90px; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
+  transition: background 0.3s, color 0.3s;
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--header-h);
+}
+
+/* Header */
+header {
+  background: #6200ea;
+  color: white;
+  padding: 15px 0;
+  text-align: center;
+  position: relative;
+  z-index: 1000;
+}
+h1 { margin: 0 0 6px; font-size: 24px; }
+nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px 16px;
+  padding: 6px 12px 10px;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+  padding: 6px 8px;
+  border-radius: 6px;
+}
+nav a:hover { text-decoration: underline; }
+
+.container {
+  width: min(92%, 980px);
+  margin: 20px auto;
+}
+
+.card {
+  background: white;
+  padding: 15px;
+  margin: 20px 0;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+h2 {
+  color: #6200ea;
+  margin: 0 0 12px;
+  font-size: 20px;
+}
+p { font-size: 14px; }
+
+section { scroll-margin-top: var(--header-h); }
+
+/* Profile photo */
+.profile-pic {
+  width: 100px;
+  height: 120px;
+  border-radius: 10px;
+  object-fit: cover;
+  margin: 10px auto 5px;
+  display: block;
+  border: 3px solid #fff;
+}
+
+/* Typing effect */
+.typing {
+  display: inline-block;
+  border-right: 2px solid #fff;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: blink 0.7s infinite;
+  font-weight: bold;
+  color: #ffeb3b;
+  font-size: 16px;
+  min-height: 20px;
+}
+@keyframes blink { 50% { border-color: transparent; } }
+
+/* Skills */
+.skills-list ul { list-style: none; padding: 0; margin: 0; }
+.skills-list li {
+  margin: 8px 0;
+  background: #eee;
+  padding: 6px;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+/* Resume button */
+.resume-btn {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 8px 16px;
+  background: #6200ea;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+  font-size: 14px;
+}
+.resume-btn:hover { background: #4500b5; }
+
+/* Dark mode */
+.dark-mode { background: #121212; color: #e0e0e0; }
+.dark-mode .card { background: #1e1e1e; color: #e0e0e0; }
+.dark-mode h2 { color: #bb86fc; }
+.dark-mode .skills-list li { background: #333; color: #e0e0e0; }
+
+.dark-toggle {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: white;
+  color: #6200ea;
+  border: none;
+  padding: 6px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 14px;
+}
+.dark-mode .dark-toggle { background: #333; color: #bb86fc; }
+
+footer {
+  text-align: center;
+  padding: 12px;
+  background: #6200ea;
+  color: white;
+  margin-top: 20px;
+  font-size: 14px;
+}
